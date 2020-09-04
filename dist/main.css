@@ -1,0 +1,16 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: grey;
+  padding: 10px 20px;
+}
+
+.nav__items {
+  display: flex;
+}
