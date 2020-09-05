@@ -1,19 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/175ad7f7dc.js" crossorigin="anonymous"></script>
+
     <title>ApiFinder</title>
 </head>
+
 <body>
     <nav class="navbar">
         <ul class="nav__items">
-            <h2 class="logo">Api Finder</h2>
-            <select name="" id="">
-            </select>
+            <h2 class="logo"><i class="fas fa-search"></i>Api Finder</h2>
+            <div class="center__search">
+                <select class="search__category search__group" name="search">
+                    <option value="Select Category">Select Category</option>
+                   <option value="Animals">Animals</option>
+                   <option value="Anime">Anime</option>
+                   <option value="Anti-Malware">Anti-Malware</option>
+                   <option value="Art">Art & Desing</option>
+                   <option value="Books">Books</option>
+                   <option value="Business">Business</option>
+                   <option value="Calendar">Calendar</option>
+                   <option value="Cloud Storage">Cloud Storage & File Sharing</option>
+                   <option value="Continuous Integration">Continuous Integration</option>
+                   <option value="Cryptocurrency">Cryptocurrency</option>
+                   <option value="Currency Exchange">Currency Exchange</option>
+                   <option value="Data Validation">Data Validation</option>
+                   <option value="Development">Development</option>
+                   <option value="Dictionaries">Dictionaries</option>
+                   <option value="Environment">Environment</option>
+                   <option value="Events">Events</option>
+                   <option value="Finance">Finance</option>
+                   <option value="Food">Food & Drink</option>
+                   <option value="Games">Games & Comics</option>
+                   <option value="Geocoding">Geocoding</option>
+                   <option value="Government">Government</option>
+                   <option value="Health">Health</option>
+                   <option value="Jobs">Jobs</option>
+                   <option value="Machine Learning">Machine Learning</option>
+                   <option value="Music">Music</option>
+                   <option value="News">News</option>
+                   <option value="Open Data">Open Data</option>
+                   <option value="Open Source Projects">Open Source Projects</option>
+                   <option value="Patent">Patent</option>
+                   <option value="Personality">Personality</option>
+                   <option value="Photography">Photography</option>
+                   <option value="Science">Science & Math</option>
+                   <option value="Security">Security</option>
+                   <option value="Shopping">Shopping</option>
+                   <option value="Social">Social</option>
+                   <option value="Sports">Sports & Fitness</option>
+                   <option value="Test Data">Test Data</option>
+                   <option value="Text Analysis">Text Analysis</option>
+                   <option value="Tracking">Tracking</option>
+                   <option value="Transportation">Transportation</option>
+                   <option value="URL Shorteners">URL Shorteners</option>
+                   <option value="Vehicle">Vehicle</option>
+                   <option value="Video">Video</option>
+                   <option value="Weather">Weather</option>
+                </select>
+                <button class="search__button search__group" type="submit">Search</button>
+                <div class="loading"></div>
+            </div>
         </ul>
     </nav>
 
-</body>
+    <section class="main__content">
+        <img class="main__img" src="./undraw_Mind_map_re_nlb6.svg" alt="mind map svg">
+        <div class="main__content__header">
+            <h1 class="header">Display free list of API</h1>
+            <h1 class="error"></h1>
+        </div>
+
+    </section>
+        <div class="displayed__apis">
+        </div>
+            <footer class="footer__madeBy">Made By
+                <a href="https://github.com/MateuszUrb">Mateusz Urban</a></footer>
+                <script src="./index.js"></script>
+        </body>
+
 </html>
