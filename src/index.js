@@ -96,6 +96,8 @@ let apiSection = document.querySelector(".api");
 function showFavorite() {
     favButton.addEventListener("click", function () {
         apiSection.insertAdjacentHTML('beforebegin', getFavfomLocalStrg())
+   
     })
+
 }
 showFavorite();
