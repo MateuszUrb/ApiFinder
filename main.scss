@@ -198,6 +198,9 @@ $errorMsg: #ff0033;
     &__auth {
         margin-bottom: 10px;
         font-weight: 400;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #fff;
     }
 
     &__descryption {
@@ -242,4 +245,19 @@ $errorMsg: #ff0033;
     border: 4px solid $button-color;
     border-color: $button-color $errorMsg;
     animation: loading 0.7s linear infinite;
+}
+
+// add to fav Icon
+#addToFav {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    font-size: 2.3rem;
+    position: absolute;
+    transform: translate(-72%, -90%);
+    color: green;
+}
+
+.favorite {
+    border-radius: 5px;
 }

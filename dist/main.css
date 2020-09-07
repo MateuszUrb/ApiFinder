@@ -172,6 +172,9 @@
 .api__auth {
   margin-bottom: 10px;
   font-weight: 400;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
 }
 .api__descryption {
   font-size: 1.3rem;
@@ -208,4 +211,18 @@
   border: 4px solid #0047ab;
   border-color: #0047ab #ff0033;
   animation: loading 0.7s linear infinite;
+}
+
+#addToFav {
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  font-size: 2.3rem;
+  position: absolute;
+  transform: translate(-72%, -90%);
+  color: green;
+}
+
+.favorite {
+  border-radius: 5px;
 }
