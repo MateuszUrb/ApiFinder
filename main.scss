@@ -261,3 +261,41 @@ $errorMsg: #ff0033;
 .favorite {
     border-radius: 5px;
 }
+
+@media all and (max-width: 1200px) {
+    .navbar {
+        z-index: 1;
+    }
+    .main__content {
+        flex-direction: column;
+        margin-top: -5rem;
+    }
+    .search__category {
+        width: 10rem;
+    }
+    .logo {
+        margin: 0;
+        position: relative;
+        font-size: 2rem;
+    }
+    .center__search {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+    .nav__items {
+        flex-direction: column;
+    }
+    .main__img {
+        padding: 0 0 0 40px;
+        z-index: -1;
+    }
+    .header {
+        font-size: 3rem;
+        padding: 15px;
+        text-align: center;
+        transform: translateY(-20%);
+    }
+    .favorite {
+        margin-top: 30px;
+    }
+}
