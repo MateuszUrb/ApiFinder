@@ -85,7 +85,7 @@ function getFavfomLocalStrg() {
     let keys = Object.keys(localStorage);
     let i = keys.length;
     while (i--) {
-        
+
         favHTML.push(localStorage.getItem(keys[i]))
     }
     return favHTML
@@ -99,7 +99,6 @@ function showFavorite() {
             info.innerText = "no cards added to favorites"
         };
         fakeSection.insertAdjacentHTML('afterbegin', getFavfomLocalStrg());
-        
     })
 }
 showFavorite();

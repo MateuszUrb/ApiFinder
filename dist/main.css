@@ -238,6 +238,7 @@
 
 .favorite {
   border-radius: 5px;
+  margin-left: 20px;
 }
 
 @media all and (max-width: 1200px) {
