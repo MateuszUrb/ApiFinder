@@ -127,15 +127,21 @@ $errorMsg: #ff0033;
     width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    align-items: baseline;
     padding: 10px;
     background-color: $main-color;
     font-family: 'QuickSand', Courier, monospace;
+
     a {
         margin-left: 5px;
         text-decoration: none;
         color: #fff;
         font-weight: 600;
+
+        .fab {
+            padding-left: 10px;
+        }
     }
 }
 
@@ -154,7 +160,15 @@ $errorMsg: #ff0033;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 30px;
+}
 
+.fake {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .api {
@@ -266,36 +280,101 @@ $errorMsg: #ff0033;
     .navbar {
         z-index: 1;
     }
+
     .main__content {
         flex-direction: column;
         margin-top: -5rem;
     }
+
     .search__category {
         width: 10rem;
     }
+
     .logo {
         margin: 0;
         position: relative;
         font-size: 2rem;
     }
+
     .center__search {
         flex-wrap: wrap;
         padding: 15px;
     }
+
     .nav__items {
         flex-direction: column;
     }
+
     .main__img {
         padding: 0 0 0 40px;
         z-index: -1;
     }
+
     .header {
         font-size: 3rem;
         padding: 15px;
         text-align: center;
         transform: translateY(-20%);
     }
+
     .favorite {
         margin-top: 30px;
     }
 }
+
+[data-tooltip]{
+    position: relative;
+    color: red;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      &:before {
+        opacity: 1;
+        transform: translate(-50%,-10px);
+      }
+      &:after {
+        opacity: 1;
+        transform: translate(-50%,-10px) rotate(45deg);
+      }
+    }
+    &:before {
+      position: absolute;
+      z-index: 2;
+      white-space: nowrap;
+      content: attr(data-tooltip);
+      bottom: 100%;
+      left: 50%;
+      padding: 0.5em 1em;
+      color: white;
+      font-size: 0.8em;
+      line-height: 1.7em;
+      background-color: red;
+      transition: transform 0.2s ease-out;
+      opacity: 0;
+      transform: translate(-50%,0);
+      pointer-events: none;
+      border-radius: 4px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    &:after {
+      position: absolute;
+      z-index: 3;
+      display: block;
+      bottom: 100%;
+      left: 50%;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      margin-bottom: -4px;
+      transform: translate(-50%,0) rotate(45deg);
+      transition: transform 0.2s ease-out;
+      opacity: 0;
+      pointer-events: none;
+    }
+    &.break:before {
+      white-space: normal;
+      width: 360px;
+    }
+  
+  }

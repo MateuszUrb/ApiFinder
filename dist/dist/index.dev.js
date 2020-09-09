@@ -70,7 +70,7 @@ var displayApi = function displayApi(item) {
 document.body.addEventListener('click', function (e) {
   if (event.srcElement.id == 'addToFav') {
     if (typeof Storage !== "undefined") {
-      var apiCard = e.target.parentElement.parentElement.innerHTML;
+      var apiCard = e.target.parentElement.parentElement.outerHTML;
       var getApiTitle = e.target.parentElement.children[0].innerText;
       e.target.classList.add("fas");
       localStorage.setItem(getApiTitle, apiCard);
@@ -94,31 +94,17 @@ function getFavfomLocalStrg() {
   return favHTML;
 }
 
-function createApiDiv(num) {
-  var z = document.createElement("div");
-  z.classList.add("api");
-  fakeSection.parentElement.appendChild(z);
-} // create as much div as it is saved elements in localSotrage 
-
-
-(function repeat(num) {
-  createApiDiv(num);
-  if (num > 1) repeat(num - 1);
-})(localStorage.length);
-
-var apiSection = document.querySelectorAll(".api");
-
 function showFavorite() {
   favButton.addEventListener("click", function () {
+    fakeSection.innerHTML = "";
+    info.innerHTML = "";
+
     if (localStorage.length === 0) {
       info.innerText = "no cards added to favorites";
     }
 
     ;
-
-    for (var i = 0; i <= apiSection.length; i++) {
-      apiSection[i].insertAdjacentHTML('afterbegin', getFavfomLocalStrg());
-    }
+    fakeSection.insertAdjacentHTML('afterbegin', getFavfomLocalStrg());
   });
 }
 

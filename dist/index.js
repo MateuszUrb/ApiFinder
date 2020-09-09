@@ -26,12 +26,12 @@ async function getApis() {
     info.innerHTML = "";
     let apiCategories = category.value;
     displaySpinner();
-    
+
     await fetch(`${API}=${apiCategories}&https=true`)
-    .then(apisLi => data = apisLi.json())
-    .then(data => {
-        let entries = data.entries;
-        
+        .then(apisLi => data = apisLi.json())
+        .then(data => {
+            let entries = data.entries;
+
             hideSpinner();
             entries.forEach(el => {
                 el.Auth === "" ? el.Auth = 'No Auth' : displayApi(el);
@@ -42,18 +42,18 @@ async function getApis() {
                 info.innerText = `Please Select Category`;
             }
         })
-        
-    }
-    
-    const displayApi = (item) => {
-        const {
-            API,
-            Auth,
-            Description,
-            Link
-        } = item;
-        
-        let cardHTML = `
+
+}
+
+const displayApi = (item) => {
+    const {
+        API,
+        Auth,
+        Description,
+        Link
+    } = item;
+
+    let cardHTML = `
         <div class="api">
         <div class="api__wrapper">
         <h3 class="api__title">${API}</h3>
@@ -63,53 +63,43 @@ async function getApis() {
         </div>
         <a href=${Link} class="doc__link" target="_blanck"><i class="fas fa-external-link-alt"></i></a>
         </div>`;
-        displayedApi.insertAdjacentHTML('beforeend', cardHTML);
-    }
-    
-    // save item into local storage to be later displayed in the Favorite section
-    document.body.addEventListener('click', function (e) {
-        if (event.srcElement.id == 'addToFav') {
-            if (typeof (Storage) !== "undefined") {
-                let apiCard = e.target.parentElement.parentElement.innerHTML;
-                const getApiTitle = e.target.parentElement.children[0].innerText;
-                e.target.classList.add("fas")
-                localStorage.setItem(getApiTitle, apiCard);
-            } else {
-                alert("Storage in this browser is not supported")
-            }
-        };
-    });
-    
-    function getFavfomLocalStrg() {
-        let favHTML = [];
-        let keys = Object.keys(localStorage);
-        let i = keys.length;
-        while (i--) {
-            favHTML.push(localStorage.getItem(keys[i]))
-        }
-        return favHTML
-    }
-    
-    function createApiDiv(num) {
-        let z = document.createElement("div");
-        z.classList.add("api")
-        fakeSection.parentElement.appendChild(z);
-    }
-    // create as much div as it is saved elements in localSotrage 
-    (function repeat(num) {
-        createApiDiv(num);
-        if (num > 1) repeat(num - 1);
-    })(localStorage.length);
-    
-    const apiSection = document.querySelectorAll(".api");
+    displayedApi.insertAdjacentHTML('beforeend', cardHTML);
+}
 
-    function showFavorite() {
-        favButton.addEventListener("click", function () {
-            if (localStorage.length === 0) {
-                info.innerText = "no cards added to favorites"};
-                for (let i = 0; i <= apiSection.length; i++) {
-        apiSection[i].insertAdjacentHTML('afterbegin', getFavfomLocalStrg());
+// save item into local storage to be later displayed in the Favorite section
+document.body.addEventListener('click', function (e) {
+    if (event.srcElement.id == 'addToFav') {
+        if (typeof (Storage) !== "undefined") {
+            let apiCard = e.target.parentElement.parentElement.outerHTML;
+            const getApiTitle = e.target.parentElement.children[0].innerText;
+            e.target.classList.add("fas")
+            localStorage.setItem(getApiTitle, apiCard);
+        } else {
+            alert("Storage in this browser is not supported")
         }
+    };
+});
+
+function getFavfomLocalStrg() {
+    let favHTML = [];
+    let keys = Object.keys(localStorage);
+    let i = keys.length;
+    while (i--) {
+        
+        favHTML.push(localStorage.getItem(keys[i]))
+    }
+    return favHTML
+}
+
+function showFavorite() {
+    favButton.addEventListener("click", function () {
+        fakeSection.innerHTML = "";
+        info.innerHTML = "";
+        if (localStorage.length === 0) {
+            info.innerText = "no cards added to favorites"
+        };
+        fakeSection.insertAdjacentHTML('afterbegin', getFavfomLocalStrg());
+        
     })
 }
 showFavorite();
