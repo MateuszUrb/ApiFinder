@@ -1,9 +1,8 @@
 const category = document.querySelector("select");
 const button = document.querySelector("button");
-const displayedApi = document.querySelector(".displayed__apis")
+const displayedApi = document.querySelector(".displayed__apis");
 let info = document.querySelector(".error")
 const loadingTag = document.querySelector(".loading");
-const fav = document.querySelectorAll(".addToFav");
 const favButton = document.querySelector(".favorite");
 const fakeSection = document.querySelector(".fake")
 
@@ -23,6 +22,7 @@ const hideSpinner = () => {
 }
 async function getApis() {
     displayedApi.innerHTML = "";
+    fakeSection.innerHTML = "";
     info.innerHTML = "";
     let apiCategories = category.value;
     displaySpinner();
@@ -90,15 +90,20 @@ function getFavfomLocalStrg() {
     }
     return favHTML
 }
+let content = document.querySelectorAll(".api__wrapper");
 
 function showFavorite() {
     favButton.addEventListener("click", function () {
+        const displayedApi = document.querySelector(".displayed__apis");
         fakeSection.innerHTML = "";
+        displayedApi.innerHTML = "";
         info.innerHTML = "";
         if (localStorage.length === 0) {
             info.innerText = "no cards added to favorites"
         };
         fakeSection.insertAdjacentHTML('afterbegin', getFavfomLocalStrg());
+        console.log(content)
     })
 }
+
 showFavorite();

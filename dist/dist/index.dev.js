@@ -5,7 +5,6 @@ var button = document.querySelector("button");
 var displayedApi = document.querySelector(".displayed__apis");
 var info = document.querySelector(".error");
 var loadingTag = document.querySelector(".loading");
-var fav = document.querySelectorAll(".addToFav");
 var favButton = document.querySelector(".favorite");
 var fakeSection = document.querySelector(".fake");
 var API = "https://api.publicapis.org/entries?category";
@@ -31,10 +30,11 @@ function getApis() {
       switch (_context.prev = _context.next) {
         case 0:
           displayedApi.innerHTML = "";
+          fakeSection.innerHTML = "";
           info.innerHTML = "";
           apiCategories = category.value;
           displaySpinner();
-          _context.next = 6;
+          _context.next = 7;
           return regeneratorRuntime.awrap(fetch("".concat(API, "=").concat(apiCategories, "&https=true")).then(function (apisLi) {
             return data = apisLi.json();
           }).then(function (data) {
@@ -49,7 +49,7 @@ function getApis() {
             }
           }));
 
-        case 6:
+        case 7:
         case "end":
           return _context.stop();
       }
@@ -94,9 +94,13 @@ function getFavfomLocalStrg() {
   return favHTML;
 }
 
+var content = document.querySelectorAll(".api__wrapper");
+
 function showFavorite() {
   favButton.addEventListener("click", function () {
+    var displayedApi = document.querySelector(".displayed__apis");
     fakeSection.innerHTML = "";
+    displayedApi.innerHTML = "";
     info.innerHTML = "";
 
     if (localStorage.length === 0) {
@@ -105,6 +109,7 @@ function showFavorite() {
 
     ;
     fakeSection.insertAdjacentHTML('afterbegin', getFavfomLocalStrg());
+    console.log(content);
   });
 }
 
