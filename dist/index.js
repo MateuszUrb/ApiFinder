@@ -90,6 +90,13 @@ function getFavfomLocalStrg() {
     }
     return favHTML
 }
+// clear loaclSotarge with saved apiCards
+
+let favoriteClearButton = document.querySelector(".favorite__clear");
+favoriteClearButton.addEventListener("click", function () {
+    localStorage.clear();
+});
+
 let content = document.querySelectorAll(".api__wrapper");
 
 function showFavorite() {

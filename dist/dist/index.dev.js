@@ -92,8 +92,13 @@ function getFavfomLocalStrg() {
   }
 
   return favHTML;
-}
+} // clear loaclSotarge with saved apiCards
 
+
+var favoriteClearButton = document.querySelector(".favorite__clear");
+favoriteClearButton.addEventListener("click", function () {
+  localStorage.clear();
+});
 var content = document.querySelectorAll(".api__wrapper");
 
 function showFavorite() {

@@ -31,12 +31,12 @@
 
 .logo {
   justify-content: center;
-  position: absolute;
   margin-left: 5rem;
   color: #343a40;
   text-transform: uppercase;
   font-family: "QuickSand", Courier, monospace;
   font-weight: 600;
+  width: 21%;
 }
 .logo i {
   padding-right: 10px;
@@ -96,6 +96,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+  text-align: center;
 }
 
 .main__img {
@@ -233,7 +234,7 @@
   font-size: 2.3rem;
   position: absolute;
   transform: translate(-72%, -90%);
-  color: green;
+  color: #0047ab;
 }
 
 .favorite {
@@ -248,7 +249,7 @@
 
   .main__content {
     flex-direction: column;
-    margin-top: -5rem;
+    margin-top: 1rem;
   }
 
   .search__category {
@@ -259,11 +260,12 @@
     margin: 0;
     position: relative;
     font-size: 2rem;
+    width: fit-content;
   }
 
   .center__search {
     flex-wrap: wrap;
-    padding: 15px;
+    padding: 30px;
   }
 
   .nav__items {
@@ -284,57 +286,10 @@
 
   .favorite {
     margin-top: 30px;
+    max-width: 14rem;
   }
-}
-[data-tooltip] {
-  position: relative;
-  color: red;
-  text-decoration: none;
-}
-[data-tooltip]:hover:before, [data-tooltip]:focus:before {
-  opacity: 1;
-  transform: translate(-50%, -10px);
-}
-[data-tooltip]:hover:after, [data-tooltip]:focus:after {
-  opacity: 1;
-  transform: translate(-50%, -10px) rotate(45deg);
-}
-[data-tooltip]:before {
-  position: absolute;
-  z-index: 2;
-  white-space: nowrap;
-  content: attr(data-tooltip);
-  bottom: 100%;
-  left: 50%;
-  padding: 0.5em 1em;
-  color: white;
-  font-size: 0.8em;
-  line-height: 1.7em;
-  background-color: red;
-  transition: transform 0.2s ease-out;
-  opacity: 0;
-  transform: translate(-50%, 0);
-  pointer-events: none;
-  border-radius: 4px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-[data-tooltip]:after {
-  position: absolute;
-  z-index: 3;
-  display: block;
-  bottom: 100%;
-  left: 50%;
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  margin-bottom: -4px;
-  transform: translate(-50%, 0) rotate(45deg);
-  transition: transform 0.2s ease-out;
-  opacity: 0;
-  pointer-events: none;
-}
-[data-tooltip].break:before {
-  white-space: normal;
-  width: 360px;
+
+  .buttons {
+    text-align: center;
+  }
 }

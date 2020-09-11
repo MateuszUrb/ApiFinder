@@ -12,4 +12,4 @@ _Bug_
 - [] after displayed favorite cards, a comma is displayed as well
 
 _Ideas_
-- [] add feature to delate card from favorite section/localStorage
+- [x] add feature to delate cards from favorite section/localStorage

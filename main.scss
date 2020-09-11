@@ -39,12 +39,12 @@ $errorMsg: #ff0033;
 
 .logo {
     justify-content: center;
-    position: absolute;
     margin-left: 5rem;
     color: $main-text-color;
     text-transform: uppercase;
     font-family: 'QuickSand', Courier, monospace;
     font-weight: 600;
+    width: 21%;
 
     i {
         padding-right: 10px;
@@ -107,7 +107,7 @@ $errorMsg: #ff0033;
         align-items: center;
         flex-direction: column;
         justify-content: space-around;
-
+        text-align: center;
     }
 }
 
@@ -269,7 +269,7 @@ $errorMsg: #ff0033;
     font-size: 2.3rem;
     position: absolute;
     transform: translate(-72%, -90%);
-    color: green;
+    color: $button-color;
 }
 
 .favorite {
@@ -284,7 +284,7 @@ $errorMsg: #ff0033;
 
     .main__content {
         flex-direction: column;
-        margin-top: -5rem;
+        margin-top: 1rem;
     }
 
     .search__category {
@@ -295,11 +295,12 @@ $errorMsg: #ff0033;
         margin: 0;
         position: relative;
         font-size: 2rem;
+        width: fit-content;
     }
 
     .center__search {
         flex-wrap: wrap;
-        padding: 15px;
+        padding: 30px;
     }
 
     .nav__items {
@@ -320,62 +321,10 @@ $errorMsg: #ff0033;
 
     .favorite {
         margin-top: 30px;
+        max-width: 14rem;
+    }
+
+    .buttons {
+        text-align: center;
     }
 }
-
-[data-tooltip]{
-    position: relative;
-    color: red;
-    text-decoration: none;
-    &:hover,
-    &:focus {
-      &:before {
-        opacity: 1;
-        transform: translate(-50%,-10px);
-      }
-      &:after {
-        opacity: 1;
-        transform: translate(-50%,-10px) rotate(45deg);
-      }
-    }
-    &:before {
-      position: absolute;
-      z-index: 2;
-      white-space: nowrap;
-      content: attr(data-tooltip);
-      bottom: 100%;
-      left: 50%;
-      padding: 0.5em 1em;
-      color: white;
-      font-size: 0.8em;
-      line-height: 1.7em;
-      background-color: red;
-      transition: transform 0.2s ease-out;
-      opacity: 0;
-      transform: translate(-50%,0);
-      pointer-events: none;
-      border-radius: 4px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-    &:after {
-      position: absolute;
-      z-index: 3;
-      display: block;
-      bottom: 100%;
-      left: 50%;
-      content: '';
-      width: 10px;
-      height: 10px;
-      background-color: red;
-      margin-bottom: -4px;
-      transform: translate(-50%,0) rotate(45deg);
-      transition: transform 0.2s ease-out;
-      opacity: 0;
-      pointer-events: none;
-    }
-    &.break:before {
-      white-space: normal;
-      width: 360px;
-    }
-  
-  }
