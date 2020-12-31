@@ -1,0 +1,19 @@
+.pattern_bottom_right {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.circle_upper_left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+}
+
+
+.doubble_circle_pattern {
+    position: absolute;
+    bottom: 0;
+}
