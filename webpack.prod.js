@@ -8,6 +8,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 
 module.exports = merge(common, {
+    mode: 'production',
+    devtool: 'source-map',
     output: {
         filename: '[name].[contenthash].bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -16,10 +18,19 @@ module.exports = merge(common, {
     module: {
         rules: [
             {
-                test: /\.scss$/,
+                test: /\.(scss|sass)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                            postcssOptions: {
+                                path: 'postcss.config.js'
+                            }
+                        }
+                    },
                     "sass-loader",
                 ]
             },
