@@ -12,8 +12,57 @@
     z-index: -10;
 }
 
-
 .doubble_circle_pattern {
     position: absolute;
     bottom: 0;
+    width: 300px;
+    height: 300px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: .5;
+    object-fit: fill;
+}
+
+.half__circle {
+    position: absolute;
+    bottom: 0;
+}
+
+.upper_right_circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: .5;
+    transform: translate(75px, -75px);
+}
+
+.dots-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(5px, -10px);
+}
+
+.dots-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg) translateY(-50%);
+}
+
+.whole__chip {
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+
+    .chip__path_bottom {
+        margin-right: 85px;
+        margin-bottom: -5px;
+    }
+
+    .chip__path_right {
+        margin-right: -181px;
+    }
+
 }

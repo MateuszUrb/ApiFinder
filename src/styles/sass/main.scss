@@ -1,7 +1,10 @@
 @import "./colors";
-@import './fonts';
 @import './backgroundSVG';
-
+@import './fontSize';
+@import './btn';
+@import './nav';
+@import './apiResultsBcg';
+@import './searchNavigation';
 
 * {
     padding: 0;
@@ -11,55 +14,62 @@
 
 body {
     background-color: $sub_main;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
-.header {
-    font-family: 'hind_maduraisemibold', sans-serif, Courier, monospace;
-    font-size: 180px;
-    font-weight: 600;
-    background: rgb(0, 69, 73);
-    background: linear-gradient(-90deg, rgba(0, 69, 73, .3) 1%, rgba(6, 146, 151, 0.7903536414565826) 40%, rgba(238, 238, 238, 1) 98%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    left: 218.73px;
-    top: 193.68px;
-    z-index: 100;
-
-}
-
-nav {
-    background-color: $main_color;
-    display: flex;
-    flex-direction: column;
+.context__center {
+    width: 80%;
+    margin: 0 auto;
     height: 100vh;
-    width: 82px;
-    align-items: center;
-    position: absolute;
-    z-index: 100;
 
-    .search {
-        color: $mint;
-        width: 43px;
-        height: 43px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        font-size: 40px;
-        margin-top: 38px;
-        transition: color .2s ease-in;
-        transition: transform .1s ease-in;
-
-        &:hover {
-            color: $white;
-            cursor: pointer;
-            transform: scale(1.1);
-        }
+    .header {
+        font-family: 'Hind Madurai', sans-serif, Courier, monospace;
+        font-size: 180px;
+        font-weight: 400;
+        background: rgb(0, 69, 73);
+        background: linear-gradient(-90deg, rgba(0, 69, 73, .3) 1%, rgba(6, 146, 151, 0.7903536414565826) 40%, rgba(238, 238, 238, 1) 98%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 100;
+        transform: translate(5%, 31%);
+        width: fit-content;
     }
 }
 
-h3 {
-    color: $sub_main;
-    font-family: 'hind_madurairegular', sans-serif, monospace;
+.mainContent {
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    margin-top: 5rem;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .mainContent__text {
+        font-family: 'Hind Madurai', sans-serif, Courier, monospace;
+        font-weight: 200;
+        font-size: $h2;
+        color: $white;
+        width: 50%;
+        text-align: center;
+        letter-spacing: 1.5px;
+        line-height: 155%;
+        margin: 8% 0 0 12%;
+        align-self: flex-start;
+    }
+
+    .illustration {
+        align-self: flex-end;
+        justify-self: end;
+        height: 90%;
+        width: 80%;
+        z-index: 100;
+    }
+}
+
+// CHECK IF IMG HAS ALT TAG
+img:not([alt]) {
+    border: 5px solid red
 }

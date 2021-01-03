@@ -1,0 +1,17 @@
+    .search__navigation {
+        overflow: hidden;
+        background-color: $main_color;
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+
+        .results__header {
+            position: relative;
+            height: 130px;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(107.11deg, #00ADB5 -112.7%, #000000 149.79%);
+            box-shadow: 0 9px 22px 0px black;
+        }
+    }

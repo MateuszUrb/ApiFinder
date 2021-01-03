@@ -1,0 +1,30 @@
+nav {
+    background-color: $main_color;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 82px;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+
+    .search {
+        color: $mint;
+        width: 43px;
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        font-size: 40px;
+        margin-top: 38px;
+        transition: color .2s ease-in;
+        transition: transform .1s ease-in;
+
+        &:hover {
+            color: $white;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+}

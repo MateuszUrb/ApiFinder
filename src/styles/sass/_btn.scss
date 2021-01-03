@@ -1,0 +1,40 @@
+.btn__github {
+    top: 0;
+    position: absolute;
+    right: 0;
+    width: 11rem;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    font-size: $h2;
+    color: $mint;
+    background-color: $main_color;
+    border-radius: 5px;
+    border: 2px solid $mint;
+    margin: 2% 20% 0 0;
+    transition: color .1s ease-in;
+
+    .btn__link {
+        text-decoration: none;
+        color: $mint;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        justify-content: center;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: $white;
+        border-color: $white;
+    }
+
+    &:active {
+        background-color: $mint;
+    }
+}
