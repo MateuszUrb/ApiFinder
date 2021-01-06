@@ -1,4 +1,4 @@
-.results__slide {
+.results {
     width: calc(100% - 300px);
     height: 100%;
     background-color: $white;
@@ -7,4 +7,213 @@
     top: 0;
     right: 0;
     overflow: hidden;
+    transform: translateX(100%);
+
+    &__location {
+        top: 100px;
+        position: absolute;
+        border-bottom: 3px solid $mint;
+        font-family: $font1;
+        width: 200px;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 50px;
+        font-weight: 400;
+
+    }
+
+    &__cards {
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10rem;
+
+        // styling for api card after that are displayed after clicking show fav or after click on nav category link
+        .api {
+            width: 500px;
+            background-color: $main_color;
+            display: flex;
+            height: 270px;
+            margin: 1.3rem;
+
+            &__backgroundSVG {
+                position: absolute;
+            }
+
+
+            &__wrapper {
+                width: 85%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 20px 0 50px;
+            }
+
+            &__title {
+                width: 100%;
+                padding: 5px;
+                color: $white;
+                text-align: center;
+                font-size: 23px;
+                font-family: $font1;
+                line-height: 130%;
+                font-weight: 300;
+            }
+
+            &__descryption {
+                font-size: $paragraph;
+                color: $white;
+                font-family: $font1;
+                font-weight: 300;
+                line-height: 127.4%;
+                letter-spacing: .04em;
+                height: 70%;
+                display: flex;
+                text-align: center;
+                align-items: center;
+            }
+
+
+            &__auth {
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateY(-100%);
+                background-color: $main_color;
+                padding: 5px 10px;
+                border-radius: 5px 5px 0 0;
+                width: fit-content;
+                font-family: $font1;
+                font-weight: 600;
+                color: $white;
+
+                span {
+                    color: $mint;
+                }
+
+            }
+
+            .addToFav {
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $white;
+                margin: 15px 0 0 15px;
+                font-size: 37px;
+                cursor: pointer;
+                transition: color .2s ease-in;
+
+                &:hover {
+                    color: $mint;
+                    transition: transform .2s ease-in;
+
+
+                    &:active {
+                        transform: scale(1.2);
+                        color: $add_to_fav;
+
+                    }
+
+                }
+
+            }
+        }
+
+        .doc__link {
+            width: 15%;
+            color: $white;
+            font-size: $paragraph;
+            background-color: $mint;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            background-image: linear-gradient(to left,
+                    transparent,
+                    transparent 50%,
+                    #00c6ff 50%,
+                    #00c6ff);
+            background-position: 100% 0;
+            background-size: 200% 100%;
+            transition: all .25s ease-in;
+
+            &:hover {
+                background-position: 0 0;
+            }
+        }
+    }
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        height: 100%;
+
+        .btns {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+
+            &__fav {
+                margin-right: 30px;
+            }
+
+            &__fav,
+            &__delate {
+                padding: 8px 15px;
+                border: none;
+                background-color: $main_color;
+                border-radius: 5px;
+                color: $white;
+                font-size: $paragraph;
+                font-family: $font1;
+                cursor: pointer;
+                transition: scale .2s ease-out;
+
+                &:hover {
+                    i {
+                        color: $mint;
+                    }
+                }
+
+                i {
+                    padding-right: 10px;
+                }
+            }
+
+        }
+
+    }
+
+    &__scroll__Top {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 70px;
+        border-radius: 50px;
+        width: 40px;
+        font-size: $h2;
+        color: $white;
+        background-color: $mint;
+        border: none;
+        margin: 0 10px 10px 0;
+        cursor: pointer;
+
+        &:checked {
+            color: $mint;
+        }
+
+        &:hover {
+            background-color: $main_color;
+            border: none;
+
+            &:active {
+                i {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
 }
