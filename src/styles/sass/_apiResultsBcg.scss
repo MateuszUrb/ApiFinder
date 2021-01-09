@@ -6,8 +6,36 @@
     position: absolute;
     top: 0;
     right: 0;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     transform: translateX(100%);
+
+    &__scrollTop {
+        position: sticky;
+        bottom: 30px;
+        margin-left: 10px;
+        width: 40px;
+        height: 65px;
+        color: $white;
+        background-color: $mint;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        font-size: 28px;
+        cursor: pointer;
+        opacity: 0;
+        transition: transform .2s ease-in;
+
+        &:hover {
+            transform: scale(1.3);
+
+            i {
+                color: $sub_main;
+            }
+        }
+
+    }
 
     &__location {
         top: 100px;
@@ -17,8 +45,10 @@
         width: 200px;
         display: flex;
         justify-content: flex-end;
-        font-size: 50px;
+        font-size: 32px;
         font-weight: 400;
+        transition: transform .2s ease-in;
+        transform: translateX(-100%);
 
     }
 
@@ -29,6 +59,7 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 10rem;
+        visibility: hidden;
 
         // styling for api card after that are displayed after clicking show fav or after click on nav category link
         .api {
@@ -36,12 +67,16 @@
             background-color: $main_color;
             display: flex;
             height: 270px;
+            visibility: visible;
             margin: 1.3rem;
 
-            &__backgroundSVG {
+            &__svg {
                 position: absolute;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
+                background-image: url("../../assets/imgs/Api__Card_svgBackground/Vector.svg");
             }
-
 
             &__wrapper {
                 width: 85%;
@@ -60,7 +95,7 @@
                 font-size: 23px;
                 font-family: $font1;
                 line-height: 130%;
-                font-weight: 300;
+                font-weight: 600;
             }
 
             &__descryption {
@@ -74,6 +109,7 @@
                 display: flex;
                 text-align: center;
                 align-items: center;
+                margin-top: 33px;
             }
 
 
@@ -96,7 +132,7 @@
 
             }
 
-            .addToFav {
+            #addToFav {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -120,6 +156,11 @@
                 }
 
             }
+
+            .selectedFav {
+                color: $mint !important;
+            }
+
         }
 
         .doc__link {
@@ -149,7 +190,6 @@
     &__container {
         width: 90%;
         margin: 0 auto;
-        height: 100%;
 
         .btns {
             display: flex;
@@ -180,7 +220,9 @@
 
                 i {
                     padding-right: 10px;
+
                 }
+
             }
 
         }
@@ -188,17 +230,16 @@
     }
 
     &__scroll__Top {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        height: 70px;
-        border-radius: 50px;
+        position: sticky;
+        right: 10px;
+        bottom: 10px;
+        height: 40px;
         width: 40px;
+        border-radius: 50px;
         font-size: $h2;
         color: $white;
         background-color: $mint;
         border: none;
-        margin: 0 10px 10px 0;
         cursor: pointer;
 
         &:checked {
@@ -216,4 +257,12 @@
             }
         }
     }
+}
+
+.info {
+    color: $mint;
+    font-size: $info;
+    width: inherit;
+    font-family: $font1;
+    transform: translateX(25%);
 }

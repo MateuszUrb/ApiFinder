@@ -1,2 +1,1 @@
-import './Animations/mainPage';
-import './Animations/searchSection'
+import './Animations/gsapAnimations';

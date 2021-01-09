@@ -752,6 +752,18 @@
       <ul class="search">
         <li><i class="fas fa-search search"></i></li>
       </ul>
+      <ul class="social">
+        <span class="social__contact">contact</span>
+        <li class="social__icon" tabindex="2">
+          <a href="mailto:98m.urban@gmail.com"><i class="far fa-envelope"></i></a>
+        </li>
+        <li class="social__icon" tabindex="3">
+          <a href="https://www.facebook.com/mateusz.urban.353"><i class="fab fa-facebook-square"></i></a>
+        </li>
+        <li class="social__icon" tabindex="4">
+          <a href="https://twitter.com/M_Urban98"><i class="fab fa-twitter-square"></i></a>
+        </li>
+      </ul>
     </nav>
     <main>
       <div class="context__center">
@@ -1311,7 +1323,9 @@
           <a
             class="btn__link"
             href="https://github.com/MateuszUrb"
+            tabindex="0"
             target="_blank"
+            rel="noopener"
             >GitHub</a
           ><i class="fab fa-github"></i>
         </button>
@@ -1322,266 +1336,267 @@
         Api<span>Finder</span>
         <i class="fas fa-times search__close"></i>
       </header>
+
       <ul class="search__results">
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Animals">
             <p>Animals</p>
             <span><i class="fas fa-paw"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Anime">
             <p>Anime</p>
             <span><i class="fas fa-tv"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
-            <p>Anti_Malware</p>
+          <div class="search__content" data-value="Anti-Malware">
+            <p>Anti-Malware</p>
             <span><i class="fas fa-bug"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Art">
             <p>Art & Design</p>
             <span><i class="fas fa-paint-brush"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Books">
             <p>Books</p>
             <span><i class="fas fa-paint-brush"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Business">
             <p>Business</p>
             <span><i class="fas fa-briefcase"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Calendar">
             <p>Calendar</p>
             <span><i class="far fa-calendar-times"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Cloud Storage">
             <p>Cloud Storage & File Sharing</p>
             <span><i class="fas fa-cloud-upload-alt"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Continuous Integration">
             <p>Continuous Integration</p>
             <span><i class="fas fa-code"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Cryptocurrency">
             <p>Cryptocurrency</p>
             <span><i class="fab fa-bitcoin"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Currency Exchange">
             <p>Currency Exchange</p>
             <span><i class="fas fa-euro-sign"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Data Validation">
             <p>Data Validation</p>
             <span><i class="fas fa-file-contract"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Development">
             <p>Development</p>
             <span><i class="fab fa-dev"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Dictionaries">
             <p>Dictionaries</p>
             <span><i class="fas fa-spell-check"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Environment">
             <p>Environment</p>
             <span><i class="fab fa-envira"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Events">
             <p>Events</p>
             <span><i class="fas fa-calendar-week"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Finance">
             <p>Finance</p>
             <span><i class="fas fa-wallet"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Food">
             <p>Food & Drink</p>
             <span><i class="fas fa-utensils"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Games">
             <p>Games & Comics</p>
             <span><i class="fas fa-gamepad"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Geocoding">
             <p>Geocoding</p>
             <span><i class="fas fa-globe-asia"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Government">
             <p>Government</p>
             <span><i class="fas fa-gavel"></i>  </span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Health">
             <p>Health</p>
             <span><i class="fas fa-heartbeat"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Jobs">
             <p>Jobs</p>
             <span><i class="fas fa-user-md"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Machine Learning">
             <p>Machine Learning</p>
             <span><i class="fas fa-network-wired"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Music">
             <p>Music</p>
             <span><i class="fas fa-music"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="News">
             <p>News</p>
             <span><i class="fas fa-newspaper"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Open Data">
             <p>Open Data</p>
             <span><i class="fas fa-envelope-open-text"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Open Source Projects">
             <p>Open Source Projects</p>
             <span><i class="fas fa-code-branch"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Patent">
             <p>Patent</p>
             <span><i class="fas fa-lightbulb"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Personality">
             <p>Personality</p>
             <span><i class="fas fa-users"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Photography">
             <p>Photography</p>
             <span><i class="fas fa-photo-video"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Science">
             <p>Science & Math</p>
             <span><i class="fas fa-square-root-alt"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Security">
             <p>Security</p>
             <span><i class="fas fa-shield-alt"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Shopping">
             <p>Shopping</p>
             <span><i class="fas fa-shopping-cart"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Social">
             <p>Social</p>
             <span><i class="fab fa-facebook"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Sports">
             <p>Sports & Fitness</p>
             <span><i class="fas fa-running"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Test Data">
             <p>Test Data</p>
             <span><i class="fas fa-vial"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Text Analysis">
             <p>Text Analysis</p>
             <span><i class="fas fa-text-width"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Tracking">
             <p>Tracking</p>
             <span><i class="fas fa-road"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="Transportation">
             <p>Transportation</p>
             <span><i class="fas fa-bus"></i></span>
           </div>
         </li>
         <li class="search__item">
-          <div class="search__content">
+          <div class="search__content" data-value="URL Shorteners">
             <p>URL Shorteners</p>
             <span><i class="fas fa-sort-amount-up-alt"></i></span>
           </div>
           <li class="search__item">
-            <div class="search__content">
+            <div class="search__content" data-value="Vehicle">
               <p>Vehicle</p>
               <span><i class="fas fa-truck-pickup"></i></span>
             </div>
           </li>
           <li class="search__item">
-            <div class="search__content">
+            <div class="search__content" data-value="Video">
               <p>Video</p>
               <span><i class="fas fa-video"></i></span>
             </div>
           </li>
           <li class="search__item">
-            <div class="search__content">
+            <div class="search__content" data-value="Weather">
               <p>Weather</p>
               <span><i class="fas fa-smog"></i></span>
             </div>
@@ -1591,26 +1606,18 @@
     </nav>
     <section class="results">
 
+
       <div class="results__container">
         <div class="btns">
-          <button class="btns__fav"><i class="fas fa-heart"></i>Show favorite</button>
-          <button class="btns__delate"><i class="fas fa-trash-alt"></i>delate saved fav</button>
+          <button class="btns__fav" tabindex="-1"><i class="fas fa-heart"></i>Show favorite</button>
+          <button class="btns__delate" tabindex="-1"><i class="fas fa-trash-alt"></i>delate saved fav</button>
         </div>
-        <div class="results__cards">
-          <div class="api">
-            <img class="api__backgroundSVG" src="./assets/imgs/Api__Card_svgBackground/apiBackground.png" alt="api card background svg">
-            <div class="api__wrapper">
-              <h3 class="api__title">Cloudmersive Natural Language Processing</h3>
-              <i class="fas fa-heart addToFav"></i>
-              <p class="api__auth"><span>Auth:</span> auth</p>
-              <p class="api__descryption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan.</p>
-            </div>
-            <a href="#" class="doc__link" target="_blanck"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-        </div>
+        <div class="results__cards"></div>
       </div>
-      <h2 class="results__location">Results</h2>
-      <button class="results__scroll__Top"><i class="fas fa-angle-double-up"></i></button>
-    </section>
+
+      <h2 class="results__location"></h2>
+      <h1 class="info"></h1>
+      <div class="results__scrollTop"><i class="fas fa-angle-double-up"></i></div>
+      </section>
   </body>
 </html>

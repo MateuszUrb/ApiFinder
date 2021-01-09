@@ -1,3 +1,5 @@
 import "./styles/sass/main.scss";
+import "./js/fetchApis";
 
-document.querySelector(".addToFav").addEventListener("click", (e) => e.target.style.color = "#00ADB5")
+
+

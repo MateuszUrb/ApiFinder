@@ -7,6 +7,7 @@ nav {
     align-items: center;
     position: absolute;
     z-index: 100;
+    justify-content: space-between;
 
     .search {
         color: $mint;
@@ -25,6 +26,45 @@ nav {
             color: $white;
             cursor: pointer;
             transform: scale(1.1);
+        }
+    }
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        height: 23rem;
+        justify-content: space-between;
+        color: $mint;
+        font-size: $paragraph;
+        align-items: center;
+        list-style: none;
+
+        &__contact {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            text-transform: uppercase;
+            font-family: $font1;
+            align-items: center;
+            display: flex;
+            letter-spacing: 4px;
+            font-size: $paragraph;
+        }
+
+        &__icon a {
+            color: $mint;
+            font-size: $h2;
+            transition: color .2s ease-in, transform .2s ease-in;
+
+            &:hover {
+                color: $white;
+
+                i {
+                    transform: scale(1.2);
+                }
+            }
+
+
         }
     }
 }
