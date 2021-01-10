@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 
-
 module.exports = merge(common, {
     mode: 'production',
     devtool: 'source-map',
@@ -51,7 +50,7 @@ module.exports = merge(common, {
                 removeAttributesQuotes: true,
                 collapseWhitespace: true,
                 removeComments: true,
-            }
+            },
         }),
     ]
 });
