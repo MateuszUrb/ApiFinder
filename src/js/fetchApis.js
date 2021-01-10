@@ -123,7 +123,6 @@ function showFavorite() {
             info.innerText = "no cards in favorites"
         };
         cardResults.insertAdjacentHTML('afterbegin', getFavfromLocalStorage());
-
     })
 }
 
