@@ -2,7 +2,6 @@ const path = require('path');
 const common = require('./webpack.common');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const autoprefixer = require('autoprefixer');
 
 
 module.exports = merge(common, {
