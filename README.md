@@ -7,14 +7,13 @@ after Selecting Category a list of available API is displayed
 _To-Do_
 
 - [] mobile friendly
-- [] show favorite, (after click on a button multiple duplicates are inserted into one div)
-- [] favorite section is not cleared after another click
-- [] add service worker for Caching file for better experience
+- [x] favorite section is not cleared after another click
 
 _Bug_
 
+- [x] show favorite, (after click on a button multiple duplicates are inserted into one div)
 - [x] after displayed favorite cards, a comma is displayed as well(fixed)
 
 _Ideas_
 
-- [x] add feature to delete cards from favorite section/localStorage
+- [x] add feature to delete all cards from favorite section/localStorage
