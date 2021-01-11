@@ -57,7 +57,10 @@ module.exports = {
             skipWaiting: true,
             clientsClaim: true,
             cacheId: 'ApiFinder',
-            additionalManifestEntries: ['index.html'],
+            additionalManifestEntries: [{
+                url: 'index.html',
+                revision: 'main entry file for project'
+            }],
             runtimeCaching: [
                 {
                     urlPattern: /^https:\/\/fonts\.gstatic\.com/,

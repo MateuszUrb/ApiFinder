@@ -43,6 +43,7 @@ module.exports = merge(common, {
             chunkFilename: "[id].css",
         }),
         new HtmlWebpackPlugin({
+            favicon: 'src/assets/imgs/webbrowser-icon.png',
             template: "./src/template.html",
             filename: "./index.html",
             minify: {

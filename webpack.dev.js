@@ -34,6 +34,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            favicon: 'src/assets/imgs/webbrowser-icon.png',
             template: "./src/template.html",
             filename: "./index.html",
         }),
