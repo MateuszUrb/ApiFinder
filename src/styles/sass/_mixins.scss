@@ -1,0 +1,13 @@
+@mixin for-size($size) {
+    @if $size==medium {
+        @media (max-width: 1024px) {
+            @content;
+        }
+
+        @if $size==small {
+            @media (max-width: 726px) {
+                @content;
+            }
+        }
+    }
+}

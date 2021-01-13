@@ -1,3 +1,8 @@
+@import './mixins';
+$mobile-470px: 470px;
+
+
+
 nav {
     background-color: $main_color;
     display: flex;
@@ -8,6 +13,28 @@ nav {
     position: absolute;
     z-index: 100;
     justify-content: space-between;
+
+    @include for-size(medium) {
+        position: relative;
+        display: flex;
+        width: 100vw;
+        height: 82px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+    .nav__center {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include for-size(medium) {
+            width: 80%;
+            flex-direction: row;
+        }
+    }
 
     .search {
         color: $mint;
@@ -21,6 +48,15 @@ nav {
         margin-top: 38px;
         transition: color .2s ease-in;
         transition: transform .2s ease-in;
+
+        @include for-size(medium) {
+            margin-top: 0;
+            height: 5rem;
+        }
+
+        @media screen and (max-width: $mobile-470px) {
+            font-size: 30px;
+        }
 
         &:hover {
             color: $white;
@@ -40,6 +76,17 @@ nav {
         align-items: center;
         list-style: none;
 
+        @include for-size(medium) {
+            flex-direction: row;
+            margin-bottom: 0;
+            height: 5rem;
+            width: 16rem;
+        }
+
+        @media screen and (max-width: $mobile-470px) {
+            justify-content: space-evenly;
+        }
+
         &__contact {
             writing-mode: vertical-rl;
             text-orientation: mixed;
@@ -49,12 +96,25 @@ nav {
             display: flex;
             letter-spacing: 4px;
             font-size: $paragraph;
+
+            @include for-size(medium) {
+                text-orientation: sideways;
+                writing-mode: horizontal-tb;
+            }
+
+            @media screen and (max-width: $mobile-470px) {
+                display: none;
+            }
         }
 
         &__icon a {
             color: $mint;
             font-size: $h2;
             transition: color .2s ease-in, transform .2s ease-in;
+
+            @media screen and (max-width: $mobile-470px) {
+                font-size: 24px;
+            }
 
             &:hover {
                 color: $white;

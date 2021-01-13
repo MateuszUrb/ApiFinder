@@ -1,95 +1,128 @@
-    .search__navigation {
-        overflow: hidden;
-        background-color: $main_color;
-        width: 300px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        transform: translateX(-100%);
+@import './mixins';
 
-        .search__header {
-            position: relative;
-            height: 130px;
-            top: 0;
-            width: 100%;
-            background: linear-gradient(107.11deg, #00ADB5 -112.7%, #000000 149.79%);
-            box-shadow: 0 9px 22px 0px black;
+
+.search__navigation {
+    overflow: hidden;
+    background-color: $main_color;
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+
+    @media screen and (max-width: 726px) {
+        width: 30%;
+    }
+
+    .search__header {
+        position: relative;
+        height: 130px;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(107.11deg, #00ADB5 -112.7%, #000000 149.79%);
+        box-shadow: 0 9px 22px 0px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $h2;
+        color: $white;
+        font-family: $font1;
+        letter-spacing: 3px;
+        border-bottom: 2px solid $main_color;
+
+        @include for-size(medium) {
+            display: none;
+        }
+
+        span {
+            color: $mint;
+        }
+
+    }
+
+    .search__close {
+        position: absolute;
+        right: 0;
+        align-self: flex-start;
+        margin: 15px 15px 0 0;
+        cursor: pointer;
+        transition: color .2s ease-in;
+        font-size: $h2;
+        color: $white;
+        z-index: 999;
+
+        @include for-size(medium) {
+            background-color: $mint;
+            border-radius: 50%;
             display: flex;
+            justify-content: 35px;
+            width: 35px;
+            height: 35px;
             justify-content: center;
             align-items: center;
-            font-size: $h2;
-            color: $white;
-            font-family: $font1;
-            letter-spacing: 3px;
-            border-bottom: 2px solid $main_color;
+        }
 
-            span {
+        &:hover {
+            color: $mint;
+
+            @include for-size(medium) {
+                color: $sub_main;
+            }
+        }
+    }
+
+    .search__results {
+        display: grid;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        height: 100%;
+        width: 300px;
+        padding: 30px 10px 0 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(50, 125px);
+        grid-gap: 10px;
+
+        @media screen and (max-width: 726px) {
+            grid-template-columns: 1fr;
+        }
+
+
+
+        .search__item {
+            list-style: none;
+            color: $white;
+            font-size: $paragraph;
+            font-family: $font1;
+            cursor: pointer;
+            background: linear-gradient(311.15deg, rgba(57, 62, 70, 0.145) 58.9%, rgba(0, 173, 181, 0.417) 100%), #222831;
+            transition: color .2s ease-in;
+            text-align: center;
+            box-shadow: 0 0 2px 0px black;
+
+            &:hover {
+                border: 1px solid $mint;
                 color: $mint;
             }
 
-            .search__close {
-                position: absolute;
-                right: 0;
-                align-self: flex-start;
-                margin: 15px 15px 0 0;
-                cursor: pointer;
-                transition: color .2s ease-in;
+            .search__content {
+                height: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                justify-content: space-around;
+                z-index: 999; // index to click anywhere on the box and get data.value to fetch data for it
 
-                &:hover {
-                    color: $mint;
+                p {
+                    z-index: -10;
+                }
+
+                span {
+                    font-size: 30px;
+                    z-index: -10;
                 }
             }
-
         }
 
-        .search__results {
-            display: grid;
-            overflow-y: scroll;
-            scroll-behavior: smooth;
-            height: 100%;
-            width: 300px;
-            padding: 30px 10px 0 10px;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(50, 125px);
-            grid-gap: 10px;
-
-
-
-            .search__item {
-                list-style: none;
-                color: $white;
-                font-size: $paragraph;
-                font-family: $font1;
-                cursor: pointer;
-                background: linear-gradient(311.15deg, rgba(57, 62, 70, 0.145) 58.9%, rgba(0, 173, 181, 0.417) 100%), #222831;
-                transition: color .2s ease-in;
-                text-align: center;
-                box-shadow: 0 0 2px 0px black;
-
-                &:hover {
-                    border: 1px solid $mint;
-                    color: $mint;
-                }
-
-                .search__content {
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column-reverse;
-                    justify-content: center;
-                    align-items: center;
-                    justify-content: space-around;
-                    z-index: 999; // index to click anywhere on the box and get data.value to fetch data for it
-
-                    p {
-                        z-index: -10;
-                    }
-
-                    span {
-                        font-size: 30px;
-                        z-index: -10;
-                    }
-                }
-            }
-
-        }
     }
+}

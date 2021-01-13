@@ -1,3 +1,6 @@
+@import './mixins';
+
+
 .pattern_bottom_right {
     bottom: 0;
     right: 0;
@@ -10,6 +13,10 @@
     left: 0;
     top: 0;
     z-index: -10;
+
+    @include for-size(medium) {
+        display: none;
+    }
 }
 
 .doubble_circle_pattern {
@@ -20,11 +27,19 @@
     transform: translate(-50%);
     opacity: .5;
     object-fit: fill;
+
+    @include for-size(medium) {
+        display: none;
+    }
 }
 
 .half__circle {
     position: absolute;
     bottom: 0;
+
+    @include for-size(medium) {
+        display: none;
+    }
 }
 
 .upper_right_circle {
@@ -33,6 +48,10 @@
     right: 0;
     opacity: .5;
     transform: translate(75px, -75px);
+
+    @include for-size(medium) {
+        display: none;
+    }
 }
 
 .dots-top-right {
@@ -40,6 +59,11 @@
     top: 0;
     right: 0;
     transform: translate(5px, -10px);
+
+    @include for-size(medium) {
+        transform: translate(-63px, -80px) rotate(-40deg);
+        left: 0;
+    }
 }
 
 .dots-bottom-left {
@@ -47,6 +71,10 @@
     bottom: 0;
     left: 0;
     transform: rotate(180deg) translateY(-50%);
+
+    @include for-size(medium) {
+        transform: rotate(180deg) translate(40%, -60%);
+    }
 }
 
 .whole__chip {
@@ -54,13 +82,47 @@
     right: -10px;
     bottom: 0;
 
+    @include for-size(medium) {
+        visibility: hidden;
+        display: flex;
+        justify-content: flex-end;
+        right: 0;
+    }
+
+    @media screen and (max-width: 726px) {
+        width: 70%;
+        transform: translateY(15px);
+
+    }
+
     .chip__path_bottom {
         margin-right: 85px;
         margin-bottom: -5px;
+
+        @include for-size(medium) {
+            transform: translateX(10px);
+            margin-right: 0;
+            visibility: visible;
+        }
+
+        @media screen and (max-width: 726px) {
+            margin-right: 0;
+        }
     }
 
     .chip__path_right {
         margin-right: -181px;
+
+        @include for-size(medium) {
+            display: none;
+        }
     }
 
+}
+
+.chip,
+#dots {
+    @include for-size(medium) {
+        display: none;
+    }
 }
