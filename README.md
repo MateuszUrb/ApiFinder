@@ -1,12 +1,12 @@
 # ApiFinder
 
 after Selecting Category a list of available API is displayed
-
+you can visit site here -> [ApiFinder](https://tender-archimedes-556406.netlify.app/)
 ![concept for main page](/concept_mainPage.png)
 
 _To-Do_
 
-- [] mobile friendly
+- [x] mobile friendly
 - [x] favorite section is not cleared after another click
 
 _Bug_
