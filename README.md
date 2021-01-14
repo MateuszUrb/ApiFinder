@@ -3,7 +3,7 @@
 # ApiFinder
 
 after Selecting Category a list of available API is displayed
-you can visit site here -> [ApiFinder](https://tender-archimedes-556406.netlify.app/)
+you can visit site here -> [ApiFinder](https://lucid-easley-92e3d4.netlify.app/)
 ![concept for main page](/concept_mainPage.png)
 
 _To-Do_
