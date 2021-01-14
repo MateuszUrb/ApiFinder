@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b38fe89-14ff-426f-818c-ca5c9128bed4/deploy-status)](https://app.netlify.com/sites/lucid-easley-92e3d4/deploys)
+
 # ApiFinder
 
 after Selecting Category a list of available API is displayed
