@@ -73,7 +73,7 @@
     transform: rotate(180deg) translateY(-50%);
 
     @include for-size(medium) {
-        transform: rotate(180deg) translate(40%, -60%);
+        display: none;
     }
 }
 
@@ -90,7 +90,7 @@
     }
 
     @media screen and (max-width: 726px) {
-        width: 70%;
+        width: 100%;
         transform: translateY(15px);
 
     }

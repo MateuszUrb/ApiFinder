@@ -83,7 +83,7 @@
         grid-gap: 10px;
 
         @media screen and (max-width: 726px) {
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(75px, 1fr);
         }
 
 
@@ -112,6 +112,10 @@
                 align-items: center;
                 justify-content: space-around;
                 z-index: 999; // index to click anywhere on the box and get data.value to fetch data for it
+
+                @media screen and (max-width: 726px) {
+                    font-size: 14px;
+                }
 
                 p {
                     z-index: -10;
