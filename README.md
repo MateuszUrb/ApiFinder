@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ad908628-8d9c-45c5-80e4-d61fe225e59f/deploy-status)](https://app.netlify.com/sites/amazing-bose-66705d/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ad908628-8d9c-45c5-80e4-d61fe225e59f/deploy-status)](https://app.netlify.com/sites/apifinder/deploys)
 
 # ApiFinder
 
