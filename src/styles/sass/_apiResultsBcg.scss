@@ -198,6 +198,7 @@
             background-position: 100% 0;
             background-size: 200% 100%;
             transition: all .25s ease-in;
+            z-index: 9999;
 
             &:hover {
                 background-position: 0 0;
