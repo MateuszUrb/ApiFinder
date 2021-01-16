@@ -1,9 +1,9 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1b38fe89-14ff-426f-818c-ca5c9128bed4/deploy-status)](https://app.netlify.com/sites/lucid-easley-92e3d4/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ad908628-8d9c-45c5-80e4-d61fe225e59f/deploy-status)](https://app.netlify.com/sites/amazing-bose-66705d/deploys)
 
 # ApiFinder
 
 after Selecting Category a list of available API is displayed
-you can visit site here -> [ApiFinder](https://lucid-easley-92e3d4.netlify.app/)
+you can visit site here -> [ApiFinder](https://apifinder.netlify.app/)
 ![concept for main page](/concept_mainPage.png)
 
 _To-Do_
