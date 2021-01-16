@@ -90,9 +90,10 @@
             &__svg {
                 position: absolute;
                 background-repeat: no-repeat;
-                width: 19rem;
-                height: 16.8rem;
+                width: 58%;
+                height: 28%;
                 background-image: url("../../assets/imgs/Api__Card_svgBackground/Vector.svg");
+                background-size: contain;
             }
 
             &__wrapper {
@@ -197,7 +198,6 @@
             background-position: 100% 0;
             background-size: 200% 100%;
             transition: all .25s ease-in;
-            z-index: 9999;
 
             &:hover {
                 background-position: 0 0;
