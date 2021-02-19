@@ -26,9 +26,9 @@ you can visit site here -> [ApiFinder](https://restapifinder.netlify.app/)
 
 ## Available commands:
 ```
-    npm run start:dev - start's project in development mode
+    npm run start:dev - start's project in development mode on http://localhost:8080/
 
-    npm run build - build project in production mode in ./dist folder
+    npm run build - build project in production mode and put all necessary files into ./dist folder
 ```
 <br/>
 
