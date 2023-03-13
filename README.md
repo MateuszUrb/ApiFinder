@@ -1,10 +1,11 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d369a588-f88a-4dbb-aa78-e7882f295b44/deploy-status)](https://app.netlify.com/sites/restapifinder/deploys)
 
-> ### ApiFinder is a simple web app where you can find a lot of different ```API``` categories for your needs, with a short description, and displaying if **authorization** is needed, also there is the link that goes to the URL of that API
+> ### ApiFinder is a simple web app where you can find a lot of different `API` categories for your needs, with a short description, and displaying if **authorization** is needed, also there is the link that goes to the URL of that API
 
 <br/>
 
 ### Tech stack used:
+
     1. babel
     2. sass
     3. webpack
@@ -15,23 +16,25 @@
 
 </br>
 
-
 # ApiFinder
 
 after Selecting Category a list of available API is displayed
 you can visit site here -> [ApiFinder](https://restapifinder.netlify.app/)
-![concept for main page](/concept_mainPage.png)
+![apiFinder home page](/apiFinder_homePage.png)
+![apiFinder menu](/apiFinder_menu.png)
+![apiFinder api](/apiFinder_api.png)
 
 </br>
 
 ## Available commands:
+
 ```
     npm run start:dev - start's project in development mode on http://localhost:8080/
 
     npm run build - build project in production mode and put all necessary files into ./dist folder
 ```
-<br/>
 
+<br/>
 
 ## _To-Do_:
 
